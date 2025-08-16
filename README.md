@@ -233,7 +233,8 @@ docker-compose up -d
 ![рисунок 3](https://github.com/ysatii/monitoring-hw2/blob/main/img/img3.jpg)
 ![рисунок 4](https://github.com/ysatii/monitoring-hw2/blob/main/img/img4.jpg)
 ![рисунок 5](https://github.com/ysatii/monitoring-hw2/blob/main/img/img5.jpg)
-
+![рисунок 6](https://github.com/ysatii/monitoring-hw2/blob/main/img/img6.jpg)
+![рисунок 7](https://github.com/ysatii/monitoring-hw2/blob/main/img/img7.jpg)
 
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
         
