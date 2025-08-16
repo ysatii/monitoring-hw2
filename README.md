@@ -219,13 +219,20 @@ Pull — сервер мониторинга сам «ходит» на цели
 P.S.: если при запуске некоторые контейнеры будут падать с ошибкой - проставьте им режим `Z`, например
 `./data:/var/lib:Z`
 
-## Решение 6
+## Решение 7
 ```
 git clone https://github.com/influxdata/sandbox.git
 cd sandbox
 docker-compose up -d
 ```
+предсавленный репозиторий кода не работает ! образы alpine отсутствуют в репозитории docker !
+Используем https://github.com/ysatii/monitoring-hw2/tree/main/tick-stack-final  
 
+![рисунок 1](https://github.com/ysatii/monitoring-hw2/blob/main/img/img1.jpg)
+![рисунок 2](https://github.com/ysatii/monitoring-hw2/blob/main/img/img2.jpg)
+![рисунок 3](https://github.com/ysatii/monitoring-hw2/blob/main/img/img3.jpg)
+![рисунок 4](https://github.com/ysatii/monitoring-hw2/blob/main/img/img4.jpg)
+![рисунок 5](https://github.com/ysatii/monitoring-hw2/blob/main/img/img5.jpg)
 
 
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
