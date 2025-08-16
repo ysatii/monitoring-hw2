@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  influxdb:
+    image: influxdb:1.8
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./data/influxdb:/var/lib/influxdb
+      - ./config/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
+    command: ["influxd", "-config", "/etc/influxdb/influxdb.conf"]
+
+  chronograf:
+    image: chronograf:1.8
+    container_name: chronograf
+    ports:
+      - "8888:8888"
+    depends_on:
+      - influxdb
+    volumes:
+      - ./data/chronograf:/var/lib/chronograf
+
+  telegraf:
+    image: telegraf:1.28
+    container_name: telegraf
+    depends_on:
+      - influxdb
+    volumes:
+      - ./config/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  kapacitor:
+    image: kapacitor:1.6
+    container_name: kapacitor
+    ports:
+      - "9092:9092"
+    depends_on:
+      - influxdb
+    volumes:
+      - ./config/kapacitor/kapacitor.conf:/etc/kapacitor/kapacitor.conf:ro
+      - ./data/kapacitor:/var/lib/kapacitor
+    command: ["kapacitord", "-config", "/etc/kapacitor/kapacitor.conf"]
+
+networks:
+  default:
+    name: ticknet

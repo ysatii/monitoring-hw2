@@ -1,0 +1,17 @@
+# Исключаем папку sandbox (TICK-стек)
+sandbox/
+
+# Стандартные артефакты docker-compose
+*.log
+*.pid
+*.sock
+
+# Игнорим временные файлы и кэш
+*.tmp
+*.swp
+.DS_Store
+
+# Python (если будешь писать скрипт из доп. задания)
+__pycache__/
+*.pyc
+*.pyo

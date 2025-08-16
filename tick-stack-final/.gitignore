@@ -1,0 +1,6 @@
+data/
+screenshots/
+*.log
+*.pid
+*.sock
+.DS_Store
