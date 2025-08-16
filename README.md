@@ -234,7 +234,6 @@ docker-compose up -d
 ![рисунок 4](https://github.com/ysatii/monitoring-hw2/blob/main/img/img4.jpg)
 ![рисунок 5](https://github.com/ysatii/monitoring-hw2/blob/main/img/img5.jpg)
 ![рисунок 6](https://github.com/ysatii/monitoring-hw2/blob/main/img/img6.jpg)
-![рисунок 7](https://github.com/ysatii/monitoring-hw2/blob/main/img/img7.jpg)
 
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
         
@@ -244,7 +243,10 @@ docker-compose up -d
     - Вверху вы можете увидеть запрос, аналогичный SQL-синтаксису. Поэкспериментируйте с запросом, попробуйте изменить группировку и интервал наблюдений.
 
 Для выполнения задания приведите скриншот с отображением метрик утилизации cpu из веб-интерфейса.
-#
+
+## Решение 8
+![рисунок 7](https://github.com/ysatii/monitoring-hw2/blob/main/img/img7.jpg)
+
 9. Изучите список [telegraf inputs](https://github.com/influxdata/telegraf/tree/master/plugins/inputs). 
 Добавьте в конфигурацию telegraf следующий плагин - [docker](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker):
 ```
